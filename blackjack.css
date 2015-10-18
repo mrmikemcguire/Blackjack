@@ -1,0 +1,64 @@
+body
+	{
+	background-color: tan;
+	}
+h1
+    {
+     margin-left: 75px;
+    }
+h2
+    {
+    margin-left: 45px;
+    }
+button
+    {
+	background: lightblue;
+    }
+
+#table
+    {
+    position: absolute;
+    height: 600px; 
+    width: 600px;
+    margin-top: 30px;
+    background-image: url(images/cardTable600.jpg);
+    }
+
+#buttons
+    {
+    padding-top: 50px;
+    }
+
+#undrawnCards
+    {
+    position: absolute;
+    top: 250px;
+    left: 300px;
+    }
+
+.card
+    {
+    transition: all 500ms ease;
+    }
+
+.in-d-hand
+    {
+    position: absolute;
+    top: 100px;
+    }
+
+.in-p-hand
+    {
+    position: absolute;
+    top: 400px;
+    }
+
+.played
+    {
+    position: absolute;
+    top: 250px;
+    }
+
+
+
+
