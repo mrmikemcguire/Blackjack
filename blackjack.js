@@ -19,14 +19,12 @@ function cardAlert (clickEvent)
 
 $('#deal').click(function()
         {
-        numberOfCards = $('#numberOfCards').val();
-        discardLocation = (((numberOfCards * 12) + 180) / 2) + 80;
         var card = "<img src='images/classic-cards/redVertFull.png'>";
         var table = $('#table');
         var dealerHand = new Array();
         var playerHand = new Array();
     
-        for(var i = 0; i < numberOfCards; i++)
+        for(var i = 0; i < 2; i++)
             {
             dealerHand.push(deck[0]);
             deck.splice(0, 1);
@@ -34,11 +32,8 @@ $('#deal').click(function()
             deck.splice(0, 1);
             }
     
-        dealerHand = dealerHand.sort(bySuitAndThenRank);
-        playerHand = playerHand.sort(bySuitAndThenRank);
-    
         var newLeft = 180;
-        for(var i = 0; i < numberOfCards; i++)
+        for(var i = 0; i < 2; i++)
             {
             $('#table').append(card);
             var cardObj = table.children().get(i); 
@@ -54,7 +49,7 @@ $('#deal').click(function()
             }
         newLeft = 180;
         var counter = 0;
-        for(var j = numberOfCards; j < numberOfCards * 2; j++)
+        for(var j = 2; j < 4; j++)
             {
             $('#table').append(card);
             var cardObj = table.children().get(j); 
@@ -86,23 +81,3 @@ function shuffle(array)
   	return array;
 	};
 
-function bySuitAndThenRank(cardA, cardB)
-    {
-    if (cardA.suit > cardB.suit)
-        {
-        return 1;
-        }
-    if (cardA.suit < cardB.suit)
-        {
-        return -1;
-        }
-    if (cardA.value > cardB.value)
-        {
-        return 1;
-        }
-    if (cardA.value < cardB.value)
-        {
-        return -1;
-        }
-    return 0;
-    }
