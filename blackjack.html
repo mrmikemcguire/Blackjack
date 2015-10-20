@@ -11,14 +11,15 @@
     <h1>Blackjack</h1>
   </header>
 
-  <div>
-    <button type="button" id="deal">Deal</button>
-  </div>
-
+  <button type="button" id="deal">Deal</button>
   <div id="table"></div>
 
-  <audio id='sound'><source src="sounds/shufflingCards.mp3" /></audio>
+  <div id="choices">
+    <img src="images/hit150.jpg" id="hit" onclick="hit()"/>
+    <img src="images/stay150.jpg"id="stand" onclick="stand()"/>
+  </div>
 
+  <audio id='sound'><source src="sounds/shufflingCards.mp3" /></audio>
   <script src="blackjack.js"></script>
 </body>
 </html>

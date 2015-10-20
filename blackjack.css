@@ -6,10 +6,7 @@ h1
     {
      margin-left: 75px;
     }
-h2
-    {
-    margin-left: 45px;
-    }
+
 button
     {
 	background: lightblue;
@@ -24,9 +21,12 @@ button
     background-image: url(images/cardTable600.jpg);
     }
 
-#buttons
+#choices
     {
-    padding-top: 50px;
+    position: absolute;
+    top: 720px;
+    left: 140px;
+    margin: 20px;
     }
 
 #undrawnCards

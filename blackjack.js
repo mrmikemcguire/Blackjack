@@ -1,7 +1,5 @@
 shuffle(deck);
 $('#sound')[0].play();
-var z = 1;
-var discardLocation;
 
 function cardAlert (clickEvent) 
 	{
@@ -13,11 +11,9 @@ function cardAlert (clickEvent)
     $card.removeClass('in-d-hand');
     $card.removeClass('in-p-hand');
     $card.css('left', discardLocation);
-	$card.css('z-index', z);
-	z ++;
 	}
 
-$('#deal').click(function()
+$('#deal').on("click", function()
         {
         var card = "<img src='images/classic-cards/redVertFull.png'>";
         var table = $('#table');
@@ -65,7 +61,17 @@ $('#deal').click(function()
             newLeft += 12;
             }
         });
-          
+
+$('#hit').on('click', function hit()
+    {
+    alert("Hit me, Baby!");
+    });
+
+$('#stand').on('click', function stand()
+    {
+    alert("I'm good!");
+    });
+
 function shuffle(array) 
 	{
   	var currentIndex = array.length, temporaryValue, randomIndex ;
@@ -79,5 +85,5 @@ function shuffle(array)
     	array[randomIndex] = temporaryValue;
   		}
   	return array;
-	};
+	}
 
