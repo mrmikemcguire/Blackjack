@@ -28,7 +28,7 @@ $('#deal').on("click", function()
             deck.splice(0, 1);
             }
     
-        var newLeft = 180;
+        var newLeft = 140;
         for(var i = 0; i < 2; i++)
             {
             $('#table').append(card);
@@ -43,7 +43,7 @@ $('#deal').on("click", function()
             $(cardObj).click(cardAlert);
             newLeft += 12;
             }
-        newLeft = 180;
+        newLeft = 140;
         var counter = 0;
         for(var j = 2; j < 4; j++)
             {
