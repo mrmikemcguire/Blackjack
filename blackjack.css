@@ -15,21 +15,26 @@ button
 #table
     {
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 600px; 
+    width: 600px;
     margin-top: 30px;
-    background-image: url(images/cardTable400.jpg);
-    //cosmetic change for commiting purposes
-    //why can't I push this?
-    //driving me crazy!
+    background-image: url(images/cardTable600.jpg);
+    //trying to change this
     }
 
 #choices
     {
     position: absolute;
-    top: 520px;
-    left: 40px;
+    top: 720px;
+    left: 140px;
     margin: 20px;
+    }
+
+#undrawnCards
+    {
+    position: absolute;
+    top: 250px;
+    left: 300px;
     }
 
 .card
@@ -40,13 +45,13 @@ button
 .in-d-hand
     {
     position: absolute;
-    top: 50px;
+    top: 100px;
     }
 
 .in-p-hand
     {
     position: absolute;
-    top: 240px;
+    top: 400px;
     }
 
 .played
