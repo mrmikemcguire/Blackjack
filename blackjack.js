@@ -48,3 +48,38 @@ function shuffle(array)
     }
     return array;
     };
+
+function check()
+    {
+    if (total < 17)
+        {
+        deal(dealTarget);
+        check();
+        }
+    else if (total > 21)
+        {
+        winner = player;
+        }
+    else
+        {
+        return total;
+        }
+    }
+
+function choose()
+    {
+    if (hit)
+        {
+        deal(player);
+        check();
+        choose();
+        }
+    else
+        {
+        check();
+        switchDealTarget();
+        return total;
+        }
+    }
+
+

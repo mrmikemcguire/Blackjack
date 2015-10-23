@@ -1,0 +1,37 @@
+Blackjack
+
+- shuffle()
+- placeBet()
+- deal
+  - deal(dealTarget)
+    - takes top card from deck and adds it to player hand array
+    - deletes card
+- player turn
+  - choose():  player chooses hit or stand
+    - if hit
+      - deal(player)
+      - check()
+      - choose()
+    - if stand
+      - check()
+      - switchDealTarget()
+      - return total
+- dealer turn
+  - deal(dealTarget)
+  - check()
+  - dealerTotal = total
+- check()
+  - if total < 17
+    - deal(dealTarget)
+    - check()
+  - else if total > 21
+    - return winner = player
+  - else
+    - return total
+- settleBet()
+  - if playerTotal > dealerTotal
+    - return winner = player
+  - else if playerTotal == dealerTotal
+    - return winner = tie
+  - else
+    - return winner = dealer
