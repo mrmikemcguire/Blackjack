@@ -12,6 +12,20 @@ button
 	background: lightblue;
     }
 
+#dealerCards
+    {
+    position: absolute;
+    top: 50px;
+    left: 90px;
+    }
+
+#playerCards
+    {
+    position: absolute;
+    top: 220px;
+    left: 90px;
+    }
+
 #table
     {
     position: absolute;
@@ -30,34 +44,36 @@ button
     }
 
 #undrawnCards
-    {
+{
     position: absolute;
     top: 250px;
     left: 300px;
-    }
+}
 
 .card
-    {
+{
     transition: all 500ms ease;
-    }
+}
 
 .in-d-hand
-    {
+{
     position: absolute;
-    top: 50px;
-    }
+    top: 100px;
+}
 
 .in-p-hand
-    {
+{
     position: absolute;
-    top: 220px;
-    }
+    top: 400px;
+}
 
 .played
-    {
+{
     position: absolute;
     top: 250px;
-    }
+}
+
+
 
 
 
