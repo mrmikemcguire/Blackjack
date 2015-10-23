@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bdbd936-d1ff-4e4b-a0da-c3c65a1dada1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blackjack.css" afterPath="$PROJECT_DIR$/blackjack.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blackjack.html" afterPath="$PROJECT_DIR$/blackjack.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blackjack.js" afterPath="$PROJECT_DIR$/blackjack.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,8 +28,8 @@
       <file leaf-file-name="blackjack.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blackjack.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.811321">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -48,8 +48,8 @@
       <file leaf-file-name="blackjack.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blackjack.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24446903">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.47013274">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,9 +76,9 @@
       <list>
         <option value="$PROJECT_DIR$/deck.js" />
         <option value="$PROJECT_DIR$/Readme.txt" />
+        <option value="$PROJECT_DIR$/blackjack.css" />
         <option value="$PROJECT_DIR$/blackjack.html" />
         <option value="$PROJECT_DIR$/blackjack.js" />
-        <option value="$PROJECT_DIR$/blackjack.css" />
       </list>
     </option>
   </component>
@@ -357,7 +357,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445617052555</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Prior to major rewrite #2">
+      <created>1445618340995</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1445618340995</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -401,7 +407,8 @@
     <MESSAGE value="Work PC update" />
     <MESSAGE value="Card values adjusted" />
     <MESSAGE value="Prior to major rewrite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prior to major rewrite" />
+    <MESSAGE value="Prior to major rewrite #2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prior to major rewrite #2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -584,14 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blackjack.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.811321">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blackjack.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -600,10 +599,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blackjack.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blackjack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24446903">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.47013274">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
