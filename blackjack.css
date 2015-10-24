@@ -43,12 +43,6 @@ button
     margin: 20px;
     }
 
-#undrawnCards
-{
-    position: absolute;
-    top: 250px;
-    left: 300px;
-}
 
 .card
 {
@@ -67,11 +61,6 @@ button
     top: 240px;
 }
 
-.played
-{
-    position: absolute;
-    top: 250px;
-}
 
 
 
