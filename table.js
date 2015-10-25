@@ -1,4 +1,4 @@
-Table = function () {
+Table = (function () {
   var Table = function (selector) {
     this.$board = $(selector);
   }
@@ -12,9 +12,9 @@ Table = function () {
     // as a class, your CSS can put the cards in the right place based on the
     // id, say class 0 is the top left, 1 the top right, etc.
     addCard: function (card, player) {
-      $card = this.createCard(card);
+      var $card = this.createCard(card);
       $card.addClass(player.id);
-      $card.addClass(player.type() + "-card");
+      $card.addClass(player.type + "-card");
 
       this.$board.append($card);
 
@@ -23,11 +23,11 @@ Table = function () {
 
     createCard: function (card) {
       $card = $('<img>');
-      $card.setAttribute("id", card.id);
-      $card.setAttribute("src", card.face);
+      $card.attr("id", card.id);
+      $card.attr("src", card.face);
       return $card;
     }
   };
 
-  return Dealer;
-};
+  return Table;
+})();

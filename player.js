@@ -1,8 +1,8 @@
-Player = function () {
+Player = (function () {
   var Player = function (id, points) {
     this.id = id;
     this.points = points;
-    this.hand = {};
+    this.hand = [];
     this.type = "player";
   }
 
@@ -31,12 +31,7 @@ Player = function () {
       if (points !== undefined) this.points = points;
       return this.points; // here we don't return this because it would be unexpected
     },
-
-    type: function (type) {
-      if (type !== undefined) this.type = type;
-      return this.type;
-    }
   };
 
   return Player;
-};
+})();

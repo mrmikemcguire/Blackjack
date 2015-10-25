@@ -9,11 +9,12 @@
   $(document).ready(function () {
     // Put what you would have previously put in script.js in here.
     var game = new Game();
-    var $startButton = $(".startGame");
+    var $startButton = $("#start-button");
 
     // This is your entry point. On the first turn, your dealer can deal cards
     // or shuffle the deck, etc.
     $startButton.click(function (e) {
+      alert("Game started");
       game.turn();
     });
   });
