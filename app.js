@@ -5,17 +5,20 @@
 // than waiting to get it at the very end of the page load (putting it at the
 // bottom means it will wait to for everything before it to finish downloading
 // first).
-!(function (document) {
-  $(document).ready(function () {
+!(function (document)
+    {
+    $(document).ready(function ()
+    {
     // Put what you would have previously put in script.js in here.
     var game = new Game();
     var $startButton = $("#start-button");
 
     // This is your entry point. On the first turn, your dealer can deal cards
     // or shuffle the deck, etc.
-    $startButton.click(function (e) {
-      alert("Game started");
-      game.turn();
+    $startButton.click(function (e)
+    {
+    alert("Game started");
+    game.turn();
     });
-  });
-}(document));
+    });
+    }(document));
