@@ -13,12 +13,12 @@
     var game = new Game();
     var $startButton = $("#start-button");
 
-    // This is your entry point. On the first turn, your dealer can deal cards
-    // or shuffle the deck, etc.
     $startButton.click(function (e)
-    {
-    alert("Game started");
-    game.turn();
-    });
+        {
+        shuffle(deck);
+        $('#sound')[0].play();
+        alert("Game started");
+        game.turn();
+        });
     });
     }(document));

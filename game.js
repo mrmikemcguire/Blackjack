@@ -8,17 +8,17 @@ Game = (function ()
                 table: ".table",
                 numPlayers: "2",
                 deck: deck,
-                startingPoints: 1000
+                startingAmount: 1000
             };
             }
 
         this.table = new Table(options.table);
         this.deck = options.deck;
-        this.dealer = new Dealer(0, options.startingPoints);
+        this.dealer = new Dealer(0, options.startingAmount);
         this.players = [this.dealer];
         for (var p = 1; p <= options.numPlayers; p++)
             {
-            this.players[p] = new Player(p, options.startingPoints);
+            this.players[p] = new Player(p, options.startingAmount);
             }
         this.curPid = 1;
         };
@@ -52,10 +52,33 @@ Game = (function ()
                 {
                 this.curPid = 0;
                 }
-            // ^ this is really a non-standard coding style, but I make it my personal
-            // battle to get it adopted for short if/elses :P
             }
     };
 
     return Game;
     })();
+
+$('#hit').on('click', function hit()
+    {
+    alert("Hit me, Baby!");
+    });
+
+$('#stand').on('click', function stand()
+    {
+    alert("I'm good!");
+    });
+
+function shuffle(array)
+    {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    while (0 !== currentIndex)
+        {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+        }
+    return array;
+    }

@@ -1,10 +1,10 @@
 // Dealer "inherits" from Player (inheritance in JS is a fuzzy thing).
 Dealer = (function ()
     {
-    var Dealer = function (id, points)
+    var Dealer = function (id, wager)
         {
         // Parent constructor
-        Player.call(this, id, points);
+        Player.call(this, id, wager);
         this.type = "dealer";
         }
 

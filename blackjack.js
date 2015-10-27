@@ -25,14 +25,14 @@ dealerCardValue = dealerHand[0].value;
 });
 
 $('#hit').on('click', function hit()
-{
-alert("Hit me, Baby!");
-});
+    {
+    alert("Hit me, Baby!");
+    });
 
 $('#stand').on('click', function stand()
-{
-alert("I'm good!");
-});
+    {
+    alert("I'm good!");
+    });
 
 function shuffle(array)
     {
