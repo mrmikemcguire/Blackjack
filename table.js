@@ -26,7 +26,7 @@ Table = (function ()
 
         createCard: function (card)
             {
-            $card = $('<img>');
+            $card = $('<img />');
             $card.attr("id", card.id);
             $card.attr("src", card.face);
             return $card;

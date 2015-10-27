@@ -5,8 +5,8 @@ Game = (function ()
         if (options === undefined)
             {
             options = {
-                table: ".table",
-                numPlayers: "2",
+                table: '#table',
+                numPlayers: '2',
                 deck: deck,
                 startingAmount: 1000
             };
