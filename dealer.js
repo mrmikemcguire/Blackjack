@@ -1,4 +1,4 @@
-// Dealer "inherits" from Player (inheritance in JS is a fuzzy thing).
+
 Dealer = (function ()
     {
     var Dealer = function (id, points)
