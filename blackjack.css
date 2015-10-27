@@ -49,13 +49,13 @@ button
     transition: all 500ms ease;
 }
 
-.in-d-hand
+.dealerHand
 {
     position: absolute;
     top: 60px;
 }
 
-.in-p-hand
+.playerHand
 {
     position: absolute;
     top: 240px;

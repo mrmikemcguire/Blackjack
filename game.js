@@ -40,7 +40,7 @@ Game = (function ()
                 case "hit":
                     this.dealer.deal(this.players[this.curPid], this.deck, this.table);
                     break;
-                // more options
+                // This will eventually end up in the hit() function below
             }
 
             // rotate the current player
