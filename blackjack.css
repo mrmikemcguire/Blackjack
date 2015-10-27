@@ -12,14 +12,14 @@ button
 	background: lightblue;
     }
 
-#dealerCards
+.dealerCards
     {
     position: absolute;
     top: 50px;
     left: 90px;
     }
 
-#playerCards
+.playerCards
     {
     position: absolute;
     top: 220px;
@@ -49,17 +49,17 @@ button
     transition: all 500ms ease;
 }
 
-.dealerHand
-{
-    position: absolute;
-    top: 60px;
-}
+/*.0Hand*/
+/*{*/
+    /*position: absolute;*/
+    /*top: 60px;*/
+/*}*/
 
-.playerHand
-{
-    position: absolute;
-    top: 240px;
-}
+/*.1Hand*/
+/*{*/
+    /*position: absolute;*/
+    /*top: 240px;*/
+/*}*/
 
 
 

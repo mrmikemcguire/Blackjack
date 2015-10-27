@@ -17,7 +17,6 @@
         {
         shuffle(deck);
         $('#sound')[0].play();
-        alert("Game started");
         game.turn();
         });
     });
