@@ -15,7 +15,7 @@ Dealer = (function ()
     Dealer.prototype = {
         deal: function (player, deck, table)
             {
-            card = deck.unshift();
+            var card = deck.shift();
             player.hand.push(card);
             table.addCard(card, player);
 
