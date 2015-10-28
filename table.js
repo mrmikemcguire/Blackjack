@@ -1,3 +1,5 @@
+var newLeft = 90;
+
 Table = (function ()
     {
     var Table = function (selector)
@@ -11,7 +13,8 @@ Table = (function ()
             var $card = this.createCard(card);
             $card.addClass(player.id + "Hand");
             $card.addClass(player.type + "Cards");
-
+            $card.css('left', newLeft);
+            newLeft += 12;
             this.$board.append($card);
 
             return this;
