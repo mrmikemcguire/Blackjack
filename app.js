@@ -1,4 +1,3 @@
-
 !(function (document)
     {
     $(document).ready(function ()
@@ -6,6 +5,8 @@
     // Put what you would have previously put in script.js in here.
     var game = new Game();
     var $startButton = $("#start-button");
+    var $hitMeButton = $('#hit');
+    var $standButton = $('#stand');
 
     $startButton.click(function (e)
         {
@@ -14,4 +15,29 @@
         game.turn();
         });
     });
+
+    $hitMeButton.on(function (e) {
+      alert("Hit me!");
+      game.turn("hit");
+    });
+
+    $standButton.on(function (e) {
+      alert("I'm good.");
+      game.turn("stand");
+    });
     }(document));
+
+    function shuffle(array)
+    {
+      var currentIndex = array.length, temporaryValue, randomIndex;
+
+      while (0 !== currentIndex)
+        {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+        return array;
+    }

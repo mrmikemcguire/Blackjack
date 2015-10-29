@@ -1,9 +1,9 @@
 Player = (function ()
     {
-    var Player = function (id, wager)
+    var Player = function (id, chips)
         {
         this.id = id;
-        this.wager = wager;
+        this.chips = chips;
         this.hand = [];
         this.type = "player";
         }
@@ -17,6 +17,7 @@ Player = (function ()
 
         validate: function (wager)
             {
+              // is wager < this.chips?
 
             return this; // almost always return 'this' so you can chain methods like Player.bet(10).check();
             },
@@ -28,13 +29,23 @@ Player = (function ()
             return this;
             },
 
-        wager: function (wager)
+        pointCount = function () {
+          var sum = 0;
+
+          for (var i = 0; i < this.length; i++) {
+            sum += this.hand[i].value;
+          }
+
+          return sum;
+        },
+
+        chips: function (chips)
             {
-            if (wager !== undefined)
+            if (chips !== undefined)
               {
-              this.wager = wager;
+              this.chips = chips;
               }
-            return this.wager; // here we don't return this because it would be unexpected
+            return this.chips; // here we don't return this because it would be unexpected
             },
     };
 

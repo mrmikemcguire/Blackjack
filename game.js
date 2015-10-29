@@ -25,60 +25,42 @@ Game = (function ()
 
     Game.prototype = {
         // Do all your turn based stuff here
-        turn: function ()
+        turn: function (userChoice)
             {
-            var userChoice;
-
-            // prompt user to hit or stay or bet. If this.curPid = 0, do something
-            // like userChoice = this.dealer.dealerLogic(this) and put your AI logic
-            // in there. Passing 'this' to it will pass the dealer the full context
-            // of the game.
-            userChoice = "hit"
+            if (this.turnCount === 0) {
+              for (var p in this.players) {
+                this.dealer.deal(this.players[p]...).deal(...);
+              }
+            }
 
             switch (userChoice)
             {
-                case "hit":
-                    this.dealer.deal(this.players[this.curPid], this.deck, this.table);
-                    break;
+              case "hit":
+                this.dealer.deal(this.players[this.curPid], this.deck, this.table);
+                if (this.players[this.curPid].pointCount() > 21) {
+                  // some logic
+                }
+                break;
                 // This will eventually end up in the hit() function below
+              case "stand":
+                // rotate the current player
+                if (this.curPid < this.players.length)
+                  {
+                    this.curPid++;
+                  }
+                else
+                  {
+                    this.curPid = 0;
+                    // here is where I would call something like:
+                    this.dealer.takeTurn(this);
+                    // In takeTurn, you could inspect the state of the game
+                    // (passed in above) and from within the dealer, call
+                    // game.turn(/* your dealers choice */);
+                  }
+            }
             }
 
-            // rotate the current player
-            if (this.curPid < this.players.length)
-                {
-                this.curPid++;
-                }
-            else
-                {
-                this.curPid = 0;
-                }
-            }
     };
 
     return Game;
     })();
-
-$('#hit').on('click', function hit()
-    {
-    alert("Hit me, Baby!");
-    });
-
-$('#stand').on('click', function stand()
-    {
-    alert("I'm good!");
-    });
-
-function shuffle(array)
-    {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-
-    while (0 !== currentIndex)
-        {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-        }
-    return array;
-    }
