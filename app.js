@@ -1,43 +1,42 @@
-!(function (document)
-    {
-    $(document).ready(function ()
-    {
-    // Put what you would have previously put in script.js in here.
-    var game = new Game();
-    var $startButton = $("#start-button");
-    var $hitMeButton = $('#hit');
-    var $standButton = $('#stand');
+turnCount = 0;
 
-    $startButton.click(function (e)
+!(function (document) {
+    $(document).ready(function ()
         {
-        shuffle(deck);
-        $('#sound')[0].play();
-        game.turn();
+        var game = new Game();
+        var $startButton = $("#start-button");
+        var $hitMeButton = $('#hit');
+        var $standButton = $('#stand');
+
+        $startButton.click(function (e) {
+            shuffle(deck);
+            $('#sound')[0].play();
+            game.turn();
         });
     });
 
-    $hitMeButton.on(function (e) {
-      alert("Hit me!");
-      game.turn("hit");
-    });
-
-    $standButton.on(function (e) {
-      alert("I'm good.");
-      game.turn("stand");
-    });
-    }(document));
-
-    function shuffle(array)
-    {
-      var currentIndex = array.length, temporaryValue, randomIndex;
-
-      while (0 !== currentIndex)
+    $hitMeButton.on(function (e)
         {
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex -= 1;
-          temporaryValue = array[currentIndex];
-          array[currentIndex] = array[randomIndex];
-          array[randomIndex] = temporaryValue;
-        }
-        return array;
+        alert("Hit me!");
+        game.turn("hit");
+        });
+
+    $standButton.on(function (e)
+        {
+        alert("I'm good.");
+        game.turn("stand");
+        });
+}(document));
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
     }
+    return array;
+}

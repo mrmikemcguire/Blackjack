@@ -8,38 +8,31 @@ Player = (function ()
         this.type = "player";
         }
 
-    Player.prototype = {
-        greet: function ()
+    Player.prototype =
+        {
+        validate: function(chips)
             {
-            console.log("Hi, I'm " + this.name);
             return this;
             },
 
-        validate: function (wager)
-            {
-              // is wager < this.chips?
-
-            return this; // almost always return 'this' so you can chain methods like Player.bet(10).check();
-            },
-
-        check: function ()
+        check: function()
             {
             // logic
 
             return this;
             },
 
-        pointCount = function () {
-          var sum = 0;
+        pointCount = function()
+            {
+            var sum = 0;
 
-          for (var i = 0; i < this.length; i++) {
-            sum += this.hand[i].value;
-          }
-
-          return sum;
+            for (var i = 0; i < this.length; i++) {
+                sum += this.hand[i].value;
+            }
+            return sum;
         },
 
-        chips: function (chips)
+        chips: function(chips)
             {
             if (chips !== undefined)
               {
@@ -47,7 +40,7 @@ Player = (function ()
               }
             return this.chips; // here we don't return this because it would be unexpected
             },
-    };
+        };
 
     return Player;
     })();

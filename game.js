@@ -10,7 +10,7 @@ Game = (function ()
                 deck: deck,
                 startingAmount: 1000
             };
-            }
+        }
 
         this.table = new Table(options.table);
         this.deck = options.deck;
@@ -23,44 +23,44 @@ Game = (function ()
         this.curPid = 1;
         };
 
-    Game.prototype = {
-        // Do all your turn based stuff here
+    Game.prototype =
+        {
         turn: function (userChoice)
             {
-            if (this.turnCount === 0) {
-              for (var p in this.players) {
-                this.dealer.deal(this.players[p]...).deal(...);
-              }
-            }
+            if (this.turnCount === 0)
+                {
+                for (var p in this.players)
+                    {
+                    this.dealer.deal(this.players[p].deal(this.players[p].deal()));
+                    }
+                }
 
             switch (userChoice)
-            {
-              case "hit":
-                this.dealer.deal(this.players[this.curPid], this.deck, this.table);
-                if (this.players[this.curPid].pointCount() > 21) {
-                  // some logic
+                {
+                case "hit":
+                    this.dealer.deal(this.players[this.curPid], this.deck, this.table);
+                    if (this.players[this.curPid].pointCount() > 21)
+                        {
+                        // some logic
+                        }
+                    break;
+                case "stand":
+                    if (this.curPid < this.players.length)
+                        {
+                        this.curPid++;
+                        }
+                     else
+                        {
+                        this.curPid = 0;
+                        this.dealer.takeTurn(this);
+                        // In takeTurn, you could inspect the state of the game
+                        // (passed in above) and from within the dealer, call
+                        // game.turn(/* your dealers choice */);
+                        }
+                    turnCount++;
                 }
-                break;
-                // This will eventually end up in the hit() function below
-              case "stand":
-                // rotate the current player
-                if (this.curPid < this.players.length)
-                  {
-                    this.curPid++;
-                  }
-                else
-                  {
-                    this.curPid = 0;
-                    // here is where I would call something like:
-                    this.dealer.takeTurn(this);
-                    // In takeTurn, you could inspect the state of the game
-                    // (passed in above) and from within the dealer, call
-                    // game.turn(/* your dealers choice */);
-                  }
             }
-            }
-
-    };
+        };
 
     return Game;
     })();

@@ -3,7 +3,6 @@ Dealer = (function ()
     {
     var Dealer = function (id, chips)
         {
-        // Parent constructor
         Player.call(this, id, chips);
         this.type = "dealer";
         }
@@ -12,7 +11,8 @@ Dealer = (function ()
     Dealer.prototype = Object.create(Player.prototype);
     Dealer.prototype.constructor = Dealer;
 
-    Dealer.prototype = {
+    Dealer.prototype =
+        {
         deal: function (player, deck, table)
             {
             var card = deck.shift();
@@ -21,7 +21,7 @@ Dealer = (function ()
 
             return this;
             }
-    };
+         };
 
     return Dealer;
     })();

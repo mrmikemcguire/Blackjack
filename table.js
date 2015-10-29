@@ -7,7 +7,8 @@ Table = (function ()
         this.$board = $(selector);
         }
 
-    Table.prototype = {
+    Table.prototype =
+        {
         addCard: function (card, player)
             {
             var $card = this.createCard(card);
@@ -27,7 +28,7 @@ Table = (function ()
             $card.attr("src", card.face);
             return $card;
             }
-    };
+        };
 
     return Table;
     })();
