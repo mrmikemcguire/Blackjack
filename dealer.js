@@ -1,10 +1,10 @@
 
 Dealer = (function ()
     {
-    var Dealer = function (id, wager)
+    var Dealer = function (id, chips)
         {
         // Parent constructor
-        Player.call(this, id, wager);
+        Player.call(this, id, chips);
         this.type = "dealer";
         }
 
@@ -17,7 +17,7 @@ Dealer = (function ()
             {
             var card = deck.shift();
             player.hand.push(card);
-            table.addCard(card, player);
+            dealer.addCard(card, player);
 
             return this;
             }
