@@ -22,15 +22,16 @@ Player = (function ()
             return this;
             },
 
-        pointCount = function()
+        pointCount: function()
             {
             var sum = 0;
 
-            for (var i = 0; i < this.length; i++) {
+            for (var i = 0; i < this.length; i++)
+                {
                 sum += this.hand[i].value;
-            }
+                }
             return sum;
-        },
+            },
 
         chips: function(chips)
             {
