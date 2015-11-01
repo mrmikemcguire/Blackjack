@@ -1,12 +1,11 @@
 turnCount = 0;
 
-!(function (document) {
-    $(document).ready(function ()
-        {
+!function (document) {
+    $(document).ready(function () {
         var game = new Game();
         var $startButton = $("#start-button");
-        var $hitMeButton = $('#hit');
-        var $standButton = $('#stand');
+        $hitMeButton = $('#hit');
+        $standButton = $('#stand');
 
         $startButton.click(function (e) {
             shuffle(deck);
@@ -15,20 +14,19 @@ turnCount = 0;
         });
     });
 
-    $hitMeButton.on(function (e)
-        {
+    $hitMeButton.on(function (e) {
         alert("Hit me!");
         game.turn("hit");
-        });
+    });
 
-    $standButton.on(function (e)
-        {
+    $standButton.on(function (e) {
         alert("I'm good.");
         game.turn("stand");
-        });
-}(document));
+    });
+}(document);
 
-function shuffle(array) {
+function shuffle(array)
+    {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     while (0 !== currentIndex) {

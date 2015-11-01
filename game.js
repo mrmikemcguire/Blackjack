@@ -20,6 +20,8 @@ Game = (function ()
             {
             this.players[p] = new Player(p, options.startingAmount);
             }
+        $('#dealerCount').text('The dealer shows ' + players[0].pointCount());
+        $('#playerCount').text('The player shows ' + players[1].pointCount());
         this.curPid = 1;
         };
 
@@ -39,9 +41,10 @@ Game = (function ()
                 {
                 case "hit":
                     this.dealer.deal(this.players[this.curPid], this.deck, this.table);
+
                     if (this.players[this.curPid].pointCount() > 21)
                         {
-                        // some logic
+                        alert("Busted!");
                         }
                     break;
                 case "stand":
