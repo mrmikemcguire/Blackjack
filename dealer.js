@@ -11,7 +11,7 @@ Dealer = (function ()
     Dealer.prototype = Object.create(Player.prototype);
     Dealer.prototype.constructor = Dealer;
 
-    Dealer.prototype =
+    var methods =
         {
         deal: function (player, deck, table)
             {
@@ -22,6 +22,12 @@ Dealer = (function ()
             return this;
             }
          };
+
+    for (var method in methods) {
+      if (methods.hasOwnProperty(method)) {
+        Dealer.prototype[method] = methods[method];
+      }
+    }
 
     return Dealer;
     })();
