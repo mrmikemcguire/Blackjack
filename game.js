@@ -25,8 +25,8 @@ Game = (function ()
               this.dealer.deal(this.players[p], this.deck, this.table);
               }
             }
-        $('#dealerCount').text('The dealer shows ' + players[0].pointCount());
-        $('#playerCount').text('The player shows ' + players[1].pointCount());
+        $('#dealerScore').text('The dealer shows ' + this.players[0].pointCount());
+        $('#playerScore').text('The player shows ' + this.players[1].pointCount());
         this.curPid = 1;
         };
 

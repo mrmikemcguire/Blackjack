@@ -17,7 +17,7 @@ Dealer = (function ()
             {
             var card = deck.shift();
             player.hand.push(card);
-            dealer.addCard(card, player);
+            table.addCard(card, player);
 
             return this;
             }

@@ -4,6 +4,7 @@ turnCount = 0;
     $(document).ready(function () {
         var game = new Game();
         var $startButton = $("#start-button");
+
         $hitMeButton = $('#hit');
         $standButton = $('#stand');
 
