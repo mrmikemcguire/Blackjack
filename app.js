@@ -1,5 +1,3 @@
-turnCount = 0;
-
 !function (document) {
     $(document).ready(function () {
         var game = new Game();

@@ -57,7 +57,6 @@ Game = (function ()
                         // (passed in above) and from within the dealer, call
                         // game.turn(/* your dealers choice */);
                         }
-                    turnCount++;
                 }
             }
         };
