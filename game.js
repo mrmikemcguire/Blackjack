@@ -8,7 +8,8 @@ Game = (function ()
                 table: '#table',
                 numPlayers: '2',
                 deck: deck,
-                startingAmount: 1000
+                startingAmount: 1000,
+                startingCards: 2
             };
         }
 
@@ -19,6 +20,10 @@ Game = (function ()
         for (var p = 1; p <= options.numPlayers; p++)
             {
             this.players[p] = new Player(p, options.startingAmount);
+            for (var count = 0; count < options.startingCards; count++) 
+              {
+              this.dealer.deal(this.players[p], this.deck, this.table);
+              }
             }
         $('#dealerCount').text('The dealer shows ' + players[0].pointCount());
         $('#playerCount').text('The player shows ' + players[1].pointCount());
@@ -29,14 +34,6 @@ Game = (function ()
         {
         turn: function (userChoice)
             {
-            if (this.turnCount === 0)
-                {
-                for (var p in this.players)
-                    {
-                    this.dealer.deal(this.players[p].deal(this.players[p].deal()));
-                    }
-                }
-
             switch (userChoice)
                 {
                 case "hit":
