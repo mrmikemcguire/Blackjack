@@ -12,16 +12,16 @@ turnCount = 0;
             $('#sound')[0].play();
             game.turn();
         });
-    });
 
-    $hitMeButton.on(function (e) {
-        alert("Hit me!");
-        game.turn("hit");
-    });
+        $hitMeButton.on(function (e) {
+          alert("Hit me!");
+          game.turn("hit");
+        });
 
-    $standButton.on(function (e) {
-        alert("I'm good.");
-        game.turn("stand");
+        $standButton.on(function (e) {
+          alert("I'm good.");
+          game.turn("stand");
+        });
     });
 }(document);
 
