@@ -39,7 +39,7 @@ Player = (function ()
               {
               this.chips = chips;
               }
-            return this.chips; // here we don't return this because it would be unexpected
+            return this.chips;
             },
         };
 

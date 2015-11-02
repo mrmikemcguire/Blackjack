@@ -12,12 +12,12 @@
             game.turn();
         });
 
-        $hitMeButton.on(function (e) {
+        $hitMeButton.on('click', function (e) {
           alert("Hit me!");
           game.turn("hit");
         });
 
-        $standButton.on(function (e) {
+        $standButton.on('click', function (e) {
           alert("I'm good.");
           game.turn("stand");
         });
