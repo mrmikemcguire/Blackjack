@@ -26,6 +26,7 @@ Game = (function ()
                 this.dealer.deal(this.players[p], this.deck, this.table);
                 }
             }
+        console.log(this.players[0]);
         //The pointCount() function is not executing properly
         $('#dealerScore').text('The dealer shows ' + this.players[0].pointCount());
         $('#playerScore').text('The player shows ' + this.players[1].pointCount());
@@ -40,7 +41,6 @@ Game = (function ()
                 {
                 case "hit":
                     this.dealer.deal(this.players[this.curPid], this.deck, this.table);
-
                     if (this.players[this.curPid].pointCount() > 21)
                         {
                         alert("Busted!");

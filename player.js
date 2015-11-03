@@ -5,7 +5,7 @@ Player = (function ()
         this.id = id;
         this.chips = chips;
         this.hand = [];
-        this.type = "player";
+        this.type = "player";       //Why is this hard-coded?
         }
 
     Player.prototype =
