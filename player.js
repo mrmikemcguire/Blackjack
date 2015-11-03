@@ -12,23 +12,23 @@ Player = (function ()
         {
         validate: function(chips)
             {
+            // logic
             return this;
             },
 
         check: function()
             {
             // logic
-
             return this;
             },
 
         pointCount: function()
             {
             var sum = 0;
-
             for (var i = 0; i < this.length; i++)
                 {
                 sum += this.hand[i].value;
+                alert(sum);
                 }
             return sum;
             },
@@ -40,7 +40,7 @@ Player = (function ()
               this.chips = chips;
               }
             return this.chips;
-            },
+            }
         };
 
     return Player;
