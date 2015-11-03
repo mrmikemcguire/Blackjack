@@ -7,7 +7,6 @@ Dealer = (function ()
         this.type = "dealer";
         }
 
-    // This is basically boilerplate to create the right inheritance stuff.
     Dealer.prototype = Object.create(Player.prototype);
     Dealer.prototype.constructor = Dealer;
 
@@ -23,11 +22,13 @@ Dealer = (function ()
             }
          };
 
-    for (var method in methods) {
-      if (methods.hasOwnProperty(method)) {
-        Dealer.prototype[method] = methods[method];
-      }
-    }
+    for (var method in methods)
+        {
+        if (methods.hasOwnProperty(method))
+            {
+            Dealer.prototype[method] = methods[method];
+            }
+        }
 
     return Dealer;
     })();

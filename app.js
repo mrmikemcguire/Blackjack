@@ -1,6 +1,7 @@
+var game;
+
 !function (document) {
     $(document).ready(function () {
-        var game = new Game();
         var $startButton = $("#start-button");
 
         $hitMeButton = $('#hit');
@@ -9,6 +10,7 @@
         $startButton.click(function (e) {
             shuffle(deck);
             $('#sound')[0].play();
+            game = new Game();
             game.turn();
         });
 
