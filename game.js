@@ -27,8 +27,8 @@ Game = (function ()
                 }
             }
         //The pointCount() function is not executing properly
-        $('#dealerScore').text('The dealer shows ' + this.players[0].pointCount);
-        $('#playerScore').text('The player shows ' + this.players[1].pointCount);
+        $('#dealerScore').text('The dealer shows ' + this.players[0].pointCount());
+        $('#playerScore').text('The player shows ' + this.players[1].pointCount());
         this.curPid = 1;
         };
 

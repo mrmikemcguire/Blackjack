@@ -12,13 +12,13 @@ button
 	background: lightblue;
     }
 
-.dealerCards
+.Hand1
     {
     position: absolute;
     top: 50px;
     }
 
-.playerCards
+.Hand2
     {
     position: absolute;
     top: 220px;

@@ -12,8 +12,10 @@ Table = (function ()
         addCard: function (card, player)
             {
             var $card = this.createCard(card);
-            $card.addClass(player.id + "Hand");
-            $card.addClass(player.type + "Cards");
+            $card.addClass("Hand" + player.id);
+            //$card.addClass(player.type + "Cards");  // player.type always == "player"
+
+            //change technique of staggering cards
             $card.css('left', newLeft);
             newLeft += 12;
             this.$board.append($card);
