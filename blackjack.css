@@ -12,13 +12,13 @@ button
 	background: lightblue;
     }
 
-.Hand1
+.Hand0
     {
     position: absolute;
     top: 50px;
     }
 
-.Hand2
+.Hand1
     {
     position: absolute;
     top: 220px;
@@ -41,11 +41,16 @@ button
     margin: 20px;
     }
 
-
 .card
-{
-    transition: all 500ms ease;
-}
+    {
+    position: relative;
+    margin-left: -36px;
+    }
+
+.card.first
+    {
+    left: 40px;
+    }
 
 
 

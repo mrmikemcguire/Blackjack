@@ -15,8 +15,9 @@ Dealer = (function ()
         deal: function (player, deck, table)
             {
             var card = deck.shift();
+            var isFirst = (player.hand.length === 0);
             player.hand.push(card);
-            table.addCard(card, player);
+            table.addCard(card, player, isFirst);
 
             return this;
             }

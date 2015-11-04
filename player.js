@@ -5,7 +5,7 @@ Player = (function ()
         this.id = id;
         this.chips = chips;
         this.hand = [];
-        this.type = "player";       //Why is this hard-coded?
+        this.type = "player";
         }
 
     Player.prototype =
@@ -25,10 +25,9 @@ Player = (function ()
         pointCount: function()
             {
             var sum = 0;
-            for (var i = 0; i < this.length; i++)
+            for (var i = 0; i < this.hand.length; i++)
                 {
                 sum += this.hand[i].value;
-                alert(sum);
                 }
             return sum;
             },

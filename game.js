@@ -17,8 +17,8 @@ Game = (function ()
         this.table = new Table(options.table);
         this.deck = options.deck;
         this.dealer = new Dealer(0, options.startingAmount);
-        this.players = [this.dealer];   //What does this do?
-        for (var p = 1; p <= options.numPlayers; p++)
+        this.players = [this.dealer];
+        for (var p = 0; p < options.numPlayers; p++)
             {
             this.players[p] = new Player(p, options.startingAmount);
             for (var count = 0; count < options.startingCards; count++)
@@ -26,8 +26,6 @@ Game = (function ()
                 this.dealer.deal(this.players[p], this.deck, this.table);
                 }
             }
-        console.log(this.players[0]);
-        //The pointCount() function is not executing properly
         $('#dealerScore').text('The dealer shows ' + this.players[0].pointCount());
         $('#playerScore').text('The player shows ' + this.players[1].pointCount());
         this.curPid = 1;
@@ -37,11 +35,14 @@ Game = (function ()
         {
         turn: function (userChoice)
             {
+            var currentPlayer = this.players[this.curPid];
+            var pointCount;
             switch (userChoice)
                 {
                 case "hit":
-                    this.dealer.deal(this.players[this.curPid], this.deck, this.table);
-                    if (this.players[this.curPid].pointCount() > 21)
+                    this.dealer.deal(currentPlayer, this.deck, this.table);
+                    pointCount = currentPlayer.pointCount();
+                    if (pointCount  > 21)
                         {
                         alert("Busted!");
                         }
@@ -60,7 +61,9 @@ Game = (function ()
                         // game.turn(/* your dealers choice */);
                         }
                 }
+            $('#' + currentPlayer.type + 'Score').text('The dealer shows ' + pointCount);
             }
+
         };
     return Game;
     }) ();

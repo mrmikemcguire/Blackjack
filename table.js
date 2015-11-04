@@ -9,15 +9,16 @@ Table = (function ()
 
     Table.prototype =
         {
-        addCard: function (card, player)
+        addCard: function (card, player, isFirst)
             {
             var $card = this.createCard(card);
             $card.addClass("Hand" + player.id);
             //$card.addClass(player.type + "Cards");  // player.type always == "player"
-
-            //change technique of staggering cards
-            $card.css('left', newLeft);
-            newLeft += 12;
+            if (isFirst)
+                {
+                $card.addClass('first');
+                }
+            $card.addClass("card");
             this.$board.append($card);
 
             return this;

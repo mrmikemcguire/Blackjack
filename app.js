@@ -14,7 +14,6 @@ var game;
             shuffle(deck);
             $('#sound')[0].play();
             game = new Game();
-            game.turn();
             });
 
         $hitMeButton.on('click', function (e)
