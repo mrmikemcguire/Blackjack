@@ -13,14 +13,12 @@ Table = (function ()
             {
             var $card = this.createCard(card);
             $card.addClass("Hand" + player.id);
-            //$card.addClass(player.type + "Cards");  // player.type always == "player"
+            //$card.addClass("card");
             if (isFirst)
                 {
                 $card.addClass('first');
                 }
-            $card.addClass("card");
             this.$board.append($card);
-
             return this;
             },
 

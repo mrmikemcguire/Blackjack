@@ -12,16 +12,18 @@ button
 	background: lightblue;
     }
 
-.Hand0
+.Hand0.first
     {
     position: absolute;
     top: 50px;
+    left: 40px;
     }
 
 .Hand1
     {
     position: absolute;
     top: 220px;
+    left: 40px;
     }
 
 #table
@@ -47,9 +49,10 @@ button
     margin-left: -36px;
     }
 
-.card.first
+.notFirst
     {
-    left: 40px;
+    position: relative;
+    margin-left: -36px;
     }
 
 
